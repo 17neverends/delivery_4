@@ -3,23 +3,28 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     min-width: 100%;
     -ms-overflow-style: none;
-    scrollbar-width: none;
-    scrollbar-width: none;
-    scrollbar-color: transparent transparent;
-    overflow-y: scroll; 
+     scrollbar-width: none; 
+     scrollbar-color: transparent transparent;
+     overflow-y: scroll;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 
 h1 {
     font-size: 20px;
     margin-bottom: 30px;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+  }
+
+.numbers-flex{
+    display: flex;
 }
 
 body::-webkit-scrollbar {
@@ -42,16 +47,14 @@ to {
 }
 
 
-.numbers-flex{
-    display: flex;
-}
+
 
 
 form {
     background-color: #fff;
     padding: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-    max-width: 400px;
+    max-width: 1000px;
     width: 100%;
     margin: auto;
     height: 100%;
@@ -110,7 +113,7 @@ input[type="text"]:hover {
     background-color: #e8f7ec;  
 }
 
-#confirm {
+.butt {
     background-color: #1ab248;
     color: white;
     padding: 10px 15px;
@@ -124,18 +127,17 @@ input[type="text"]:hover {
     text-align: center;
     height: 50px;
     min-height: 50px;
-    margin-bottom: 300px;
     display: flex;
     justify-content: center;
     line-height: 30px;
     transition: 0.5s; 
 }
 
-#confirm:hover {
+.butt:hover {
     background-color: #30cc5f;
 }
 
-#confirm:active {
+.butt:active {
     background-color: #158e3a;
 }
 
@@ -143,6 +145,10 @@ input[type="text"]:hover {
     position: relative;
 }
 
+#back {
+    margin-bottom: 300px;
+
+}
 
 
 .place_title {
@@ -194,30 +200,29 @@ input[type="text"]:hover {
 
 }
 
-
-
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    z-index: 1;
-    background-color: #f9f9f9;
-    box-sizing: border-box;
-    max-height: 300px;
-    overflow-y: auto;
-    width: 100%;
-  }
-  
-li {
-    padding: 8px;
+#scrollToTopBtn {
+    position:fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: #4bba5d;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
     cursor: pointer;
-    white-space: normal;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    word-wrap: break-word;
+    opacity: 0.6;
+}
+.numbers-flex {
+    display: flex;
+    justify-content: space-between; 
 }
 
-li:hover {
-    background-color: #ddd;
+.numbers-flex > div {
+    flex-grow: 1; 
+}
+
+.numbers-flex > div:last-child {
+    margin-left: 20px;
 }

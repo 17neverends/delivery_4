@@ -345,4 +345,12 @@ async function init() {
     setupEventListeners();
 }
 
+function scrollToTop() {
+  window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+  });
+}
+
+
 window.onload = init;
